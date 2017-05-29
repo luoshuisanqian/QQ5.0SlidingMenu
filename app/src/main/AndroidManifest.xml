@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.day0405.qq50slidingmenu170405">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!-- 第一个版本的侧滑菜单 ，有自定义属性的，距离屏幕右侧多少dp -->
+        <activity android:name=".SecondVersionActivity"></activity>
+        <!-- 第三个版本：抽屉式侧滑-->
+        <activity android:name=".ThirdVersionActivity"></activity>
+        <!-- 第四个版本：QQ5.0伸缩式侧滑-->
+        <activity android:name=".FourVersionActivity"></activity>
+        <!-- 第一个版本的侧滑菜单 ，没有自定义属性的 -->
+        <activity android:name=".FirstVersonActivity">
+
+        </activity>
+
+        <!--2013年谷歌IO大会推荐使用DrawerLayout代替SlidingMenu
+         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+
+        -->
+        <activity android:name=".DrawerLayoutActivity"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:huangming="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.day0405.qq50slidingmenu170405.SecondVersionActivity">
+
+    <!--当在values下定义完attr自定义属性时，就可以定义自己的命名空间了
+    xmlns:name自己取，name值和andorid前半部分是一样的，
+    后半部分它是android我们则改为我们当前应用的包名，-->
+
+
+
+
+    <!--ScrollView和HorizontalScrollView它们都有个共同的特性，
+    它们内部只能有一个控件-->
+    <com.day0405.qq50slidingmenu170405.view.TwoSlidingMenu
+        android:id="@+id/id_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        huangming:rightPadding="150dp">
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            <!--侧滑布局-->
+            <include layout="@layout/left_menu"/>
+            
+
+
+            <!--内容区域-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/qq"
+                >
+                <!--添加一个切换状态的按钮-->
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="切换菜单"
+                    android:onClick="toggleMenu"/>
+            </LinearLayout>
+            
+            
+            
+
+
+        </LinearLayout>
+
+
+    </com.day0405.qq50slidingmenu170405.view.TwoSlidingMenu>
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--2,name为控件的名称-->
+    <declare-styleable name="TwoSlidingMenu">
+        <!--编写自定义属性, 格式为:dimension也就是说支持pd,sp,px等-->
+        <attr name="rightPadding" format="dimension">
+        </attr>
+    </declare-styleable>
+
+    <!--然后就可以在布局lyaout的xml里编写自己的命名空间，编写属性了-->
+
+
+
+    <!--2,name为控件的名称-->
+    <declare-styleable name="ThirdSlidingMenu">
+        <!--编写自定义属性, 格式为:dimension也就是说支持pd,sp,px等-->
+        <attr name="rightPadding3" format="dimension">
+        </attr>
+    </declare-styleable>
+
+    <!--然后就可以在布局lyaout的xml里编写自己的命名空间，编写属性了-->
+
+    <!--2,name为控件的名称-->
+    <declare-styleable name="FourSlidingMenu">
+        <!--编写自定义属性, 格式为:dimension也就是说支持pd,sp,px等-->
+        <attr name="rightPadding4" format="dimension">
+        </attr>
+    </declare-styleable>
+
+    <!--然后就可以在布局lyaout的xml里编写自己的命名空间，编写属性了-->
+</resources>

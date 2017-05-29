@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.day0405.qq50slidingmenu170405.DrawerLayoutActivity">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="切换菜单"
+        android:textSize="25dp"
+        />
+    <android.support.v4.widget.DrawerLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <!-- 注意事项
+        1.主内容视图一定要是DrawerLayout的第一个子视图
+        2.主内容视图的宽度和高度匹配父视图，即"match_parent"
+        3.必须显示指定抽屉（如listview）的android:layout_gravity属性
+              1）android:layout_gravity="start“时，从左向右滑
+              2）android:layout_gravity="end"时，从右向左滑
+              3）不推荐使用left和right
+         4.抽屉视图的宽度以dp为单位，请不要超过320dp(为了总能看到一些主内容视图)
+        -->
+
+        <!-- 第一个视图为主要内容的视图  the main content view -->
+
+        <!-- 在后续的代码当中，动态地在FrameLayout插入Fragment -->
+        <FrameLayout
+            android:id="@+id/contetn_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </FrameLayout>
+
+        <!-- 第二个视图为左侧的导航视图    the navigation view -->
+        <!-- 当android:layout_gravity="start" 表示从左往右滑
+        如果为end表示从右往左滑 -->
+        <!-- android:choiceMode="singleChoice"单选模式 -->
+        <!-- android:divider="@android:color/transparent"不需要项与项之间的分割条 -->
+        <LinearLayout
+            android:id="@+id/left_linear"
+            android:layout_width="240dp"
+            android:layout_gravity="start"
+            android:orientation="vertical"
+            android:background="#ffffcc"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:textSize="16sp"
+                android:text="DrawerLayout侧滑菜单"
+                android:gravity="center"
+                android:layout_height="45dp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/holo_blue_bright"
+                ></View>
+            <ListView
+                android:id="@+id/left_drawer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:choiceMode="singleChoice"
+                android:divider="@android:color/holo_blue_bright"
+                android:dividerHeight="2dp"
+                >
+            </ListView>
+        </LinearLayout>
+
+
+
+    </android.support.v4.widget.DrawerLayout>
+</LinearLayout>
+
